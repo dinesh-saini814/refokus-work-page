@@ -8,7 +8,7 @@ const projects = Data.Projects;
 const ProjectSection = () => {
   const [position, setPosition] = useState(0);
 
-  const handleScroll = (val) => {
+  const handleScroll = (val: number) => {
     setPosition(val * 18);
   };
 

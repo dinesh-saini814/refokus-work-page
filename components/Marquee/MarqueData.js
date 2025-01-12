@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const images = [
   [
     "https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/666359b850995827afaa8db9_63aed9b4493ff77bba5e9939_spotify.svg",
