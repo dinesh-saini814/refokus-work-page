@@ -22,7 +22,7 @@ const ProjectSection = () => {
           initial={{ y: position, x: "-50%" }}
           animate={{ y: position + `rem`, x: "-50%" }}
           transition={{ ease: [0.22, 1, 0.36, 1], duration: 0.5 }}
-          className="window absolute w-[24rem] h-[18rem] bg-zinc-800 left-[45%]  overflow-hidden rounded-lg "
+          className=" absolute w-[24rem] h-[18rem] bg-zinc-800 left-[45%]  overflow-hidden rounded-lg "
         >
           <motion.div
             animate={{ y: -position + `rem` }}

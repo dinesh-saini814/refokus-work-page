@@ -55,7 +55,7 @@ const Footer = () => {
               height={50}
               className="w-32 mt-4"
               src="https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66bd4a1138d6a32addf4b6b2_premium_partner_badge_enterprise_blue.webp"
-              alt=""
+              alt="lorem"
             />
           </div>
         </div>

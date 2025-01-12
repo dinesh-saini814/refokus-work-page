@@ -2,9 +2,10 @@
 import { motion } from "framer-motion";
 
 import { FC } from "react";
+import { Url } from "url";
 
 interface MarqueProps {
-  image: string[] | undefined;
+  image: string[] | undefined | Url[];
 }
 
 const Marque: FC<MarqueProps> = ({ image }) => {
@@ -25,7 +26,7 @@ const Marque: FC<MarqueProps> = ({ image }) => {
         {image?.map((url, i) => (
           <img
             key={i}
-            src={url}
+            src={typeof url === "string" ? url : ""}
             className="md:w-[6vw] flex-shrink-0"
             alt="marque"
           />
@@ -33,7 +34,7 @@ const Marque: FC<MarqueProps> = ({ image }) => {
         {image?.map((url, i) => (
           <img
             key={i}
-            src={url}
+            src={typeof url === "string" ? url : ""}
             className="w-[6vw] flex-shrink-0"
             alt="marque"
           />

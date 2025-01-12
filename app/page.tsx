@@ -15,11 +15,7 @@ export default function Home() {
 
   return (
     <ReactLenis root>
-      <main
-        id="data-scroll-container"
-        data-scroll-container
-        className="w-full bg-black text-white"
-      >
+      <main className="w-full bg-black text-white">
         <Work />
         <Stripes />
         <ProjectSection />

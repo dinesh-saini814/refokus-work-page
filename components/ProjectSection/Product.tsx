@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Button from "../button/Button";
 
 interface Item {
@@ -17,11 +18,21 @@ interface ProductProps {
 }
 
 const Product: React.FC<ProductProps> = ({ item, mover, count }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  console.log("Video URL:", item.url);
+
+  useEffect(() => {
+    // Check if window is defined (client-side)
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 640);
+    }
+  }, []);
+
   return (
     <div
       className="w-full my-3 sm:my-0 py-6 sm:mx-0 mx-1 sm:border-t-[1px] sm:border-opacity-50 sm:h-[18rem] px-4 sm:px-0 rounded-2xl sm:rounded-none"
       style={{
-        backgroundColor: window.innerWidth <= 640 ? item.color : "transparent",
+        backgroundColor: isMobile ? item.color : "transparent",
       }}
     >
       <div
@@ -43,6 +54,7 @@ const Product: React.FC<ProductProps> = ({ item, mover, count }) => {
           </ul>
         </div>
         {/* Video Section */}
+
         <div className="sm:flex-grow pb-4 sm:mt-0 block sm:hidden">
           <video
             className="w-full h-auto rounded-lg"
